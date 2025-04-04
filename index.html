@@ -4,7 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Solar Landing Page</title>
-    <link href="src/output.css" rel="stylesheet" />
+    <!-- <link href="src/output.css" rel="stylesheet" /> -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="dist/output.css" rel="stylesheet" />
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
     <!-- font-awesome -->
     <link
       rel="stylesheet"
@@ -13,136 +20,172 @@
   </head>
   <body>
     <!-- nav section -->
-    <nav class="bg-teal-600 shadow-lg">
-      <div class="container mx-auto px-4">
-        <div class="flex justify-between items-center py-4 relative">
-          <!-- logo -->
-          <div class="">
-            <a
-            href="https://github.com/Muhammadbadawy64"
-            class="text-teal-800/25 font-extrabold hover:text-teal-600/80 hover:underline transition duration-300"
-            >Muhammad Badawy/></a
-          >
-            <img
-              src="images/Logo.png"
-              alt="logo"
-              srcset=""
-              class="w-40 opacity-30"
-            />
-          </div>
-          <!-- links -->
+    <header id="headerRef" class="z-50 fixed w-full">
+      <nav id="nav" class="bg-teal-600 shadow-lg transition-all duration-200">
+        <div class="container mx-auto px-4">
+          <div class="flex justify-between items-center py-4 relative">
+            <!-- logo -->
+            <div
+              class="flex items-center space-x-4 transition-all delay-300 duration-300"
+            >
+              <a
+                href="https://github.com/Muhammadbadawy64"
+                class="text-teal-200/25 font-extrabold hover:text-teal-100 hover:underline"
+                >Muhammad Badawy/></a
+              >
+              <img
+                src="images/Logo.png"
+                alt="logo"
+                srcset=""
+                class="w-10 h-10 sm:w-15 sm:h-15 opacity-30"
+              />
+            </div>
+            <!-- links -->
+            <div
+              class="hidden md:flex justify-center flex-grow transition-all duration-300 ease-in"
+            >
+              <ul
+                id="navLinks"
+                class="flex flex-wrap items-center justify-between space-x-2 sm:space-x-4"
+              >
+                <li>
+                  <a
+                    href=""
+                    class="border-teal-400 border-b-4 block bg-teal-800 text-white p-2 drop-shadow-lg rounded-lg hover:shadow-xl rounded-1 hover:text-teal-200"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a href="" class="block text-white p-3.5 hover:text-teal-200"
+                    >Trade</a
+                  >
+                </li>
+                <li>
+                  <a href="" class="block text-white p-3.5 hover:text-teal-200"
+                    >Shop</a
+                  >
+                </li>
+                <li>
+                  <a href="" class="block text-white p-3.5 hover:text-teal-200"
+                    >Contact Us</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <!-- contact -->
+            <div class="block md:block text-right text-white">
+              <p class="text-sm">Call Us</p>
+              <h3 class="text-lg font-medium">+1 2345 3456 45</h3>
+            </div>
+            <button
+              id="menuBtn"
+              class="text-white text-3xl md:hidden focus:outline-none scale-y-100 hover:text-gray-700 transition delay-300 duration-300 ease-in"
+            >
+              ☰
+            </button>
 
-          <div class="flex space-x-9 md:hidden lg:flex">
-            <ul id="navLinks" class="hidden md:flex space-x-9">
-              <li>
-                <a
-                  href=""
-                  class="border-b-6 border-teal-500 block bg-teal-800 drop-shadow-lg rounded-lg hover:shadow-xl rounded-1 text-white p-3.5 hover:text-teal-200 transition duration-300"
-                  >Home</a
-                >
-              </li>
-              <li>
-                <a
-                  href=""
-                  class="block text-white p-3.5 hover:text-teal-200 transition duration-300"
-                  >Trade</a
-                >
-              </li>
-              <li>
-                <a
-                  href=""
-                  class="block text-white p-3.5 hover:text-teal-200 transition duration-300"
-                  >Shop</a
-                >
-              </li>
-              <li>
-                <a
-                  href=""
-                  class="block text-white p-3.5 hover:text-teal-200 transition duration-300"
-                  >Contact Us</a
-                >
-              </li>
-            </ul>
-          </div>
-
-          <!-- contact -->
-          <div class="mr-8 ms:">
-            <p class="ml-32 text-white font-normal">Call Us</p>
-            <h3 class="text-2xl font-medium text-white">+1 2345 3456 45</h3>
-          </div>
-          <button
-            id="menuBtn"
-            class="text-white text-3xl md:hidden transition delay-700 duration-300 ease-in"
-          >
-            ☰
-          </button>
-
-          <div
-            id="mobileMenu"
-            class="hidden md:hidden bg-teal-900 p-4 absolute top-15 left-90 z-10 transition delay-700 duration-300 ease-in"
-          >
-            <a
-              href="#"
-              class="block bg-teal-700 rounded-4xl text-center text-white p-2 hover:text-black"
-              >Home</a
+            <div
+              id="mobileMenu"
+              class="hidden md:hidden bg-teal-950 p-6 absolute top-full left-0 w-full shadow-lg transition delay-700 duration-300 ease-in"
             >
-            <a
-              href="#"
-              class="block text-white p-2 text-center hover:text-teal-200"
-              >Trade</a
-            >
-            <a
-              href="#"
-              class="block text-white p-2 text-center hover:text-teal-200"
-              >Shop</a
-            >
-            <a
-              href="#"
-              class="block text-white p-2 text-center hover:text-teal-200"
-              >Contact Us</a
-            >
+              <div class="transition-all duration-300 delay-500">
+                <ul id="navLinks" class="flex flex-col space-y-4">
+                  <li>
+                    <button
+                      class="text-xl text-white px-2 hover:text-teal-300"
+                      id="closeBtn"
+                    >
+                      X
+                    </button>
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      class="border-2 border-teal-500 border-b-teal-500 block bg-teal-800 text-white p-3.5 drop-shadow-lg rounded-lg hover:shadow-xl rounded-1 hover:text-teal-200"
+                      >Home</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      class="block text-white p-3.5 hover:text-teal-200"
+                      >Trade</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      class="block text-white p-3.5 hover:text-teal-200"
+                      >Shop</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      class="block text-white p-3.5 hover:text-teal-200"
+                      >Contact Us</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </header>
     <!-- end nav -->
 
     <!-- hero sectiion -->
-    <section class="relative h-screen flex justify-start overflow-hidden">
-      <div class="absolute inset-0 h-160">
+
+    <section
+      class="bg-cover bg-center bg-no-repeat text-white py-4 mx-auto relative font-inter"
+    >
+      <div class="absolute inset-0">
         <img
           src="images/solar-panels-meadow 1.png"
-          alt="cover"
+          alt="Hero Image"
           class="w-full h-full object-cover"
         />
-        <div class="absolute inset-0 bg-black opacity-30"></div>
       </div>
 
-      <div
-        class="relative z-10 text-center text-white mt-60 mb-25 container px-4 sm:px-12 max-w-3xl"
-      >
-        <h1 class="text-4xl sm:text-5xl font-bold mb-4">
-          Solar Panel Installers In Plymouth
-        </h1>
-        <p class="text-lg sm:text-lg ml-11 mr-11 sm:mt-12">
-          Fueled is an award-winning technology consultancy that transforms
-          <br class="hidden sm:hidden" />
-          businesses by generating ideas, building products, and accelerating
-          <br class="hidden sm:hidden" />
-          growth
-        </p>
+      <div class="absolute inset-0 bg-black/50 opacity-50"></div>
 
-        <div class="flex flex-col ml-20 mt-7 w-300 gap-8 sm:flex-row sm:gap-2">
-          <button
-            class="w-60 h-12 bg-teal-500 cursor-pointer mt-8 sm:mt-2 rounded-3xl text-black hover:bg-teal-400 transition duration-300"
+      <div class="container relative z-10 px-4 sm:px-8 lg:px-16">
+        <div class="mx-[7.5rem] my-[16rem]">
+          <div class="absolute -top-28">
+            <img
+              src="images/precentage.png"
+              alt="percent-page"
+              class="w-full sm:w-60 md:w-80 lg:w-96 mx-auto sm:mx-0"
+            />
+          </div>
+
+          <h1 class="text-3xl sm:text-4xl lg:text-5 font-bold mb-6 text-left">
+            Solar Panel Installers In <br class="hidden md:block" />
+            Plymouth
+          </h1>
+          <p
+            class="text-base sm:text-lg lg:text-xl text-gray-200 mb-8 text-left"
           >
-            Call Us Today
-          </button>
-          <button
-            class="w-60 h-12 bg-amber-400 cursor-pointer mt-2 rounded-3xl text-black hover:bg-amber-300 transition duration-300"
-          >
-            Request a call back
-          </button>
+            Fueled is an award-winning technology consultancy that transforms
+            <br class="hidden sm:block" />
+            businesses by generating ideas, building products, and accelerating
+            <br class="hidden sm:block" />
+            growth
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-4 sm:gap-6">
+            <button
+              class="w-full sm:w-60 h-12 bg-teal-500 rounded-3xl cursor-pointer text-black hover:bg-teal-400 transition duration-300"
+            >
+              Call Us Today
+            </button>
+            <button
+              class="w-full sm:w-60 h-12 bg-amber-400 rounded-3xl cursor-pointer text-black hover:bg-amber-300 transition duration-300"
+            >
+              Request a call back
+            </button>
+          </div>
         </div>
       </div>
     </section>
@@ -154,11 +197,11 @@
         <!-- content -->
         <div class="content">
           <div class="">
-            <h2 class="text-2xl font-bold m-14">
+            <h2 class="text-2xl font-bold mb-6">
               The Friendliest Installers in <br />
               the South-West
             </h2>
-            <p class="ml-12 text-slate-600 text-center sm:text-left">
+            <p class="text-slate-600 text-center sm:text-left">
               At Solidarity Solar our aims are to help our customers towards a
               sustainable future and genuinely care about the quality of
               products we use for our installs. We never sell you equipment you
@@ -169,57 +212,75 @@
             </p>
           </div>
           <!-- orderList -->
-          <div class="flex flex-col m-10 gap-4">
+          <div class="flex flex-col mt-8 space-y-4">
             <div class="flex items-center">
-              <img src="images/01.png" alt="01/" srcset="" class="p-2 w-11" />
-              <h3 class="font-bold ml-2">Collaborate with 100+ leading</h3>
+              <img
+                src="images/01.png"
+                alt="01/"
+                class="w-8 sm:w-11 p-2 bg-white rounded-full mr-2"
+              />
+              <h3 class="font-bold">Collaborate with 100+ leading</h3>
             </div>
 
             <div class="flex items-center">
-              <img src="images/02.png" alt="02/" srcset="" class="p-2 w-11" />
-              <h3 class="font-bold ml-2">
-                100+ leading universities and companies
-              </h3>
+              <img
+                src="images/02.png"
+                alt="02/"
+                class="w-8 sm:w-11 p-2 bg-white rounded-full mr-2"
+              />
+              <h3 class="font-bold">100+ leading universities and companies</h3>
             </div>
             <div class="flex items-center">
-              <img src="images/03.png" alt="03/" srcset="" class="p-2 w-11" />
-              <h3 class="font-bold ml-2">leading universities and companies</h3>
+              <img
+                src="images/03.png"
+                alt="03/"
+                class="w-8 sm:w-11 p-2 bg-white rounded-full mr-2"
+              />
+              <h3 class="font-bold">leading universities and companies</h3>
             </div>
             <div class="flex items-center">
-              <img src="images/04.png" alt="04/" srcset="" class="p-2 w-11" />
-              <h3 class="font-bold ml-2">universities and companies</h3>
+              <img
+                src="images/04.png"
+                alt="04/"
+                class="w-8 sm:w-11 p-2 bg-white rounded-full mr-2"
+              />
+              <h3 class="font-bold">universities and companies</h3>
             </div>
           </div>
         </div>
         <!-- images -->
-        <div class="m-14">
-          <img src="images/Group 3.png" alt="picture-electron" srcset="" />
+        <div class="mt-8 sm:mt-0">
+          <img
+            src="images/Group 3.png"
+            alt="picture-electron"
+            class="w-full h-auto rounded-lg shadow-l"
+          />
         </div>
       </div>
     </section>
     <!-- End friendliest section -->
 
     <!-- Power section  -->
-    <section class="relative h-screen flex justify-start overflow-hidden">
-      <div class="absolute inset-0 h-160">
-        <img
-          src="images/power.png"
-          alt="cover"
-          class="w-full h-full object-cover"
-        />
-      </div>
+    <section
+      class="relative min-h-screen flex justify-start items-center overflow-hidden"
+    >
       <div
-        class="relative z-10 text-center text-white mt-60 mb-25 container px-4 sm:px-12 max-w-3xl"
+        class="absolute inset-0 bg-cover bg-center"
+        style="background-image: url(&quot;./images/power.png&quot;)"
+      ></div>
+
+      <div
+        class="relative z-10 text-white px-4 sm:px-12 max-w-3xl ml-4 sm:ml-0"
       >
-        <h2 class="text-4xl font-bold mb-10">
+        <h2 class="text-3xl sm:text-4xl font-bold mb-6 sm:mb-8">
           Power that Doesn't Cost the Earth
         </h2>
-        <p class="text-lg font-mono text-left mb-10 ml-13 leading-relaxed">
+        <p class="text-base sm:text-lg font-mono mb-6 sm:mb-8 leading-relaxed">
           If you need advice then give us a call on 07745593882 or hit the
           button below to request a call back!
         </p>
         <button
-          class="w-60 h-12 font-semibold bg-amber-400 cursor-pointer -ml-85 rounded-full text-black hover:bg-amber-300 transition duration-300"
+          class="w-full sm:w-60 h-12 font-semibold bg-amber-400 rounded-full text-black hover:bg-amber-300 transition duration-300 mx-auto"
         >
           Call Us Today
         </button>
@@ -231,7 +292,7 @@
     <section
       class="relative flex flex-col container mx-auto justify-center items-center"
     >
-      <div class="text-center mb-8">
+      <div class="text-center mb-8 my-8">
         <h2 class="text-3xl font-bold mb-4">Solar Kits</h2>
         <p class="text-gray-600 mx-auto">
           Complete solar system kits, ready for installation. They can be used
@@ -249,18 +310,17 @@
           <img
             src="images/solar-panels-meadow 2.png"
             alt="naturePower"
-            srcset=""
-            class="w-full rounded-lg"
+            class="w-full h-64 object-cover rounded-lg"
           />
           <h3 class="font-semibold text-xl mt-6 px-5">Off Grid</h3>
-          <p class="line-clamp-2 mt-6 px-5">
+          <p class="line-clamp-2 mt-4 px-5 text-gray-600">
             WOC has contributed to students so that they can work in their dream
             company, we will continue to stick to our commitment to create an
             advanced generation,
           </p>
           <a
             href=""
-            class="text-teal-500 font-semibold px-5 mt-6 inline-block hover:underline"
+            class="text-teal-500 font-semibold px-5 mt-6 inline-block hover:underline transition duration-300"
             >View Products <i class="fa-solid fa-arrow-right"></i
           ></a>
         </div>
@@ -270,18 +330,17 @@
           <img
             src="images/solar-panels-meadow-2.png"
             alt="naturePower"
-            srcset=""
-            class="w-full rounded-lg"
+            class="w-full h-64 object-cover rounded-lg"
           />
           <h3 class="font-semibold text-xl mt-6 px-5">On Grid</h3>
-          <p class="line-clamp-2 mt-6 px-5">
+          <p class="line-clamp-2 mt-4 px-5 text-gray-600">
             WOC has contributed to students so that they can work in their dream
             company, we will continue to stick to our commitment to create an
             advanced generation,
           </p>
           <a
             href=""
-            class="text-teal-500 font-semibold px-5 mt-6 inline-block hover:underline"
+            class="text-teal-500 font-semibold px-5 mt-6 inline-block hover:underline transition duration-300"
             >View Products <i class="fa-solid fa-arrow-right"></i
           ></a>
         </div>
@@ -291,18 +350,17 @@
           <img
             src="images/solar-panels-meadow-3.png"
             alt="naturePower"
-            srcset=""
-            class="w-full rounded-lg"
+            class="w-full h-64 object-cover rounded-lg"
           />
           <h3 class="font-semibold text-xl mt-6 px-5">Hybrid</h3>
-          <p class="line-clamp-2 mt-6 px-5">
+          <p class="line-clamp-2 mt-4 px-5 text-gray-600">
             WOC has contributed to students so that they can work in their dream
             company, we will continue to stick to our commitment to create an
             advanced generation,
           </p>
           <a
             href=""
-            class="text-teal-500 font-semibold px-5 mt-6 inline-block hover:underline"
+            class="text-teal-500 font-semibold px-5 mt-6 inline-block hover:underline transition duration-300"
             >View Products <i class="fa-solid fa-arrow-right"></i
           ></a>
         </div>
@@ -312,18 +370,18 @@
 
     <!-- Repairs over section -->
     <section
-      class="relative h-screen flex justify-center items-center overflow-hidden mt-12"
+      class="relative flex justify-center items-center overflow-hidden my-12 py-16"
     >
-      <div class="absolute inset-0 h-120">
-        <img src="images/Repairs.png" alt="cover" class="w-full object-cover" />
-        <!-- <div class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div> -->
-      </div>
+      <div
+        class="absolute inset-0 bg-cover bg-center"
+        style="background-image: url(&quot;images/Repairs.png&quot;)"
+      ></div>
 
       <div
-        class="relative bg-black/50 mb-50 text-white backdrop-blur-sm p-4 md:p-8 rounded-lg max-w-2xl pr-16 text-center shadow-lg"
+        class="relative z-10 bg-black/50 backdrop-blur-sm text-white text-center p-4 sm:p-8 rounded-lg shadow-lg max-w-2xl mx-auto"
       >
-        <h2 class="text-2xl md:text-3xl font-bold">Repairs Over Replacement</h2>
-        <p class="text-sm md:text-base leading-relaxed">
+        <h2 class="text-2xl sm:text-3xl font-bold">Repairs Over Replacement</h2>
+        <p class="text-sm sm:text-base leading-relaxed">
           We approach every aspect of our business with sustainability in mind.
           That's why we believe it's always worth trying to fix a system before
           outright replacing it, wherever possible – it requires fewer materials
@@ -337,17 +395,21 @@
     <!-- End rapiers  -->
 
     <!-- Energy Section -->
-    <section class="container mx-auto p-6">
+    <section class="container mx-auto px-4 sm:px-8 lg:px-16 py-12">
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <!-- feateres -->
-        <div class="flex flex-col justify-start items-start">
-          <img src="images/Featured icon.png" alt="Energy-icon" srcset="" />
-          <h2 class="text-3xl font-bold text-gray-900 mt-2">
+        <div class="flex flex-col justify-start items-start space-y-4 mx-4">
+          <img
+            src="images/Featured icon.png"
+            alt="Energy-icon"
+            class="w-20 h-20 sm:w-24 sm:h-24"
+          />
+          <h2 class="text-2xl sm:text-3xl font-bold text-gray-900">
             Energy Innovators <br />
             - the products we <br />
             love
           </h2>
-          <p class="text-gray-600 mt-4">
+          <p class="text-gray-600 text-sm sm:text-base">
             Lorem ipsum dolor sit amet consectetur. <br />
             Suspendisse suspendisse tempor et <br />
             ipsum sit egestas nunc. Diam in cum a in.
@@ -356,67 +418,75 @@
 
         <!-- cards -->
         <!-- <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6"> -->
-        <div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div
+          class="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6 mx-auto"
+        >
           <!-- 1 -->
           <div
-            class="bg-teal-500/2 p-6 shadow-md border drop-shadow-lg rounded-lg hover:shadow-xl transition duration-300 border-gray-200"
+            class="bg-teal-500/2 p-6 rounded-lg shadow-md hover:shadow-xl border drop-shadow-lg transition duration-300 border-gray-200"
           >
-            <div class="h-20 bg-gray-200 rounded-lg mb-4"></div>
-            <h3 class="text-xl font-semibold">
+            <div class="h-20 sm:h-24 bg-gray-200 rounded-lg mb-4"></div>
+            <h3 class="text-lg sm:text-xl font-semibold mb-2">
               SoliTek - The European Manufacturer of Solar Panels
             </h3>
-            <p class="text-gray-600 mt-2">
+            <p class="text-gray-600 text-sm sm:text-base mb-4">
               We work closely importing solar panels from Solitek, they offer 30
               year warranties on their panels and are constantly coming up with
               new ideas - including their solar greenhouse.
             </p>
             <a
               href=""
-              class="text-green-500 font-semibold mt-4 inline-block hover:underline"
+              class="text-green-500 font-semibold hover:underline flex items-center gap-2"
               >View integration <i class="fa-solid fa-arrow-right"></i
             ></a>
           </div>
           <!-- 2 -->
           <div
-            class="bg-teal-500/2 p-6 shadow-md border border-gray-200 drop-shadow-lg rounded-lg hover:shadow-xl transition duration-300"
+            class="bg-teal-500/2 p-6 rounded-lg shadow-md hover:shadow-xl border drop-shadow-lg transition duration-300 border-gray-200"
           >
-            <div class="h-20 bg-gray-200 rounded-lg mb-4"></div>
-            <h3 class="text-xl font-semibold">Sunsynk - No Power No Problem</h3>
-            <p class="text-gray-600 mt-2">
+            <div class="h-20 sm:h-24 bg-gray-200 rounded-lg mb-4"></div>
+            <h3 class="text-lg sm:text-xl font-semibold mb-2">
+              Sunsynk - No Power No Problem
+            </h3>
+            <p class="text-gray-600 text-sm sm:text-base mb-4">
               Sunsynk build the most versatile hybrid inverter on the market,
               designed to take up to 7kW of solar on a standard domestic supply
               - for simultaneous battery charging and household usage.
             </p>
             <a
               href=""
-              class="text-green-500 font-semibold mt-4 inline-block hover:underline"
+              class="text-green-500 font-semibold hover:underline flex items-center gap-2"
               >View integration <i class="fa-solid fa-arrow-right"></i
             ></a>
           </div>
           <!-- 3 -->
           <div
-            class="bg-teal-500/2 p-6 drop-shadow-lg hover:shadow-xl transition duration-300 rounded-lg shadow-md border border-gray-200"
+            class="bg-teal-500/2 p-6 rounded-lg shadow-md hover:shadow-xl border drop-shadow-lg transition duration-300 border-gray-200"
           >
-            <div class="h-20 bg-gray-200 rounded-lg mb-4"></div>
-            <h3 class="text-xl font-semibold">BYD - Electrifying Transport</h3>
-            <p class="text-gray-600 mt-2">
+            <div class="h-20 sm:h-24 bg-gray-200 rounded-lg mb-4"></div>
+            <h3 class="text-lg sm:text-xl font-semibold mb-2">
+              BYD - Electrifying Transport
+            </h3>
+            <p class="text-gray-600 text-sm sm:text-base mb-4">
               We use battery cells made by BYD, a market leader in lithium
               batteries. BYD batteries are in cars, trucks, and buses - they
               build robust batteries.
             </p>
             <a
               href=""
-              class="text-green-500 font-semibold mt-4 inline-block hover:underline"
+              class="text-green-500 font-semibold hover:underline flex items-center gap-2"
               >View integration <i class="fa-solid fa-arrow-right"></i
             ></a>
           </div>
           <!-- 4 -->
           <div
-            class="bg-teal-500/2 p-6 drop-shadow-lg hover:shadow-xl transition duration-300 rounded-lg shadow-md border border-gray-200"
+            class="bg-teal-500/2 p-6 rounded-lg shadow-md hover:shadow-xl border drop-shadow-lg transition duration-300 border-gray-200"
           >
-            <div class="h-20 bg-gray-200 rounded-lg mb-4"></div>
-            <h3 class="text-xl font-semibold">REC - Solar's Most Trusted</h3>
-            <p class="text-gray-600 mt-2">
+            <div class="h-20 sm:h-24 bg-gray-200 rounded-lg mb-4"></div>
+            <h3 class="text-lg sm:text-xl font-semibold mb-2">
+              REC - Solar's Most Trusted
+            </h3>
+            <p class="text-gray-600 text-sm sm:text-base mb-4">
               REC - Renewable Energy Corporation, are one of the longest trading
               names in solar. They know how to be truly sustainable in this
               industry - their panels are 100% lead free and have the most
@@ -424,7 +494,7 @@
             </p>
             <a
               href=""
-              class="text-green-500 font-semibold mt-4 inline-block hover:underline"
+              class="text-green-500 font-semibold hover:underline flex items-center gap-2"
               >View integration <i class="fa-solid fa-arrow-right"></i
             ></a>
           </div>
@@ -434,31 +504,28 @@
     <!-- End section Energy -->
 
     <!-- Values section -->
-    <section
-      class="relative flex flex-col container mx-auto justify-center items-center"
-    >
+    <section class="relative container mx-auto px-4 sm:px-8 lg:px-16 py-12">
       <div class="text-center mb-8">
-        <h2 class="text-3xl font-bold mb-6 mt-25">Our values</h2>
-        <p class="text-gray-600 mx-auto">
+        <h2 class="text-3xl sm:text-4xl font-bold mb-6">Our values</h2>
+        <p class="text-gray-600 text-sm sm:text-base mx-auto max-w-3xl">
           More than 3000 users have been helped by World Online Course.
         </p>
       </div>
       <!-- cards -->
       <!-- 1 -->
       <div
-        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl"
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl mx-auto"
       >
         <div
-          class="bg-teal-500/10 hover:bg-teal-200 p-2 drop-shadow-lg rounded-lg hover:shadow-xl transition duration-300"
+          class="bg-teal-500/10 hover:bg-teal-200 p-6 drop-shadow-lg rounded-lg hover:shadow-xl transition duration-300"
         >
           <img
             src="images/Vector-1.png"
             alt="naturePower"
-            srcset=""
-            class="p-4"
+            class="w-18 h-18 sm:w-20 sm:h-20 mx auto mb-4"
           />
-          <h3 class="font-semibold text-xl mt-6 px-5">Customer Care</h3>
-          <p class="mt-6 px-5">
+          <h3 class="text-xl sm:text-2x1 font-semibold mb-4">Customer Care</h3>
+          <p class="text-gray-700 text-sm sm-text-base leading-relaxed">
             We're here to help you with solar panel installation in Devon and
             Cornwall. If we were to sum ourselves up in a few words, those would
             be "reliable, honest and friendly." We find our customers agree!
@@ -467,16 +534,15 @@
         </div>
         <!-- 2 -->
         <div
-          class="bg-teal-500/10 hover:bg-teal-200 p-2 drop-shadow-lg rounded-lg hover:shadow-xl transition duration-300"
+          class="bg-teal-500/10 hover:bg-teal-200 p-6 drop-shadow-lg rounded-lg hover:shadow-xl transition duration-300"
         >
           <img
             src="images/Vector-2.png"
             alt="naturePower"
-            srcset=""
-            class="p-4"
+            class="w-18 h-18 sm:w-20 sm:h-20 mx auto mb-4"
           />
-          <h3 class="font-semibold text-xl mt-6 px-5">Price</h3>
-          <p class="mt-6 px-5">
+          <h3 class="text-xl sm:text-2x1 font-semibold mb-4">Price</h3>
+          <p class="text-gray-700 text-sm sm-text-base leading-relaxed">
             As I'm sure you'll have seen, solar systems don't tend to come
             cheap. Our aim is to make solar power accessible to everyone, so we
             price ourselves in a way that makes solar energy more affordable.
@@ -486,16 +552,15 @@
         </div>
         <!-- 3 -->
         <div
-          class="bg-teal-500/10 hover:bg-teal-200 p-2 drop-shadow-lg rounded-lg hover:shadow-xl transition duration-300"
+          class="bg-teal-500/10 hover:bg-teal-200 p-6 drop-shadow-lg rounded-lg hover:shadow-xl transition duration-300"
         >
           <img
             src="images/Vector-3.png"
             alt="naturePower"
-            srcset=""
-            class="p-4"
+            class="w-18 h-18 sm:w-20 sm:h-20 mx auto mb-4"
           />
-          <h3 class="font-semibold text-xl mt-6 px-5">Sustainability</h3>
-          <p class="mt-6 px-5">
+          <h3 class="text-xl sm:text-2x1 font-semibold mb-4">Sustainability</h3>
+          <p class="text-gray-700 text-sm sm-text-base leading-relaxed">
             As we've said, we do this because we truly care about the planet and
             about seeing people embrace a greener, more eco-friendly approach to
             power. The world of green energy can be jargon-filled and opaque, so
@@ -508,72 +573,80 @@
     <!-- End Values section -->
 
     <!-- testimonials Section -->
-    <section
-      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 mt-30 mb-24"
-    >
-      <div class="flex flex-col items-start ml-82">
-        <img src="images/coma.png" alt="shape-coma" srcset="" />
-        <h2 class="text-4xl font-bold mb-6">
-          what they say about <br />
-          WOC
-        </h2>
-        <p class="font-semibold text-gray-600">
-          More than 3000 users have been helped by <br />
-          World Online Course.
-        </p>
-      </div>
-
-      <div
-        class="bg-gray-100 w-2xl drop-shadow-lg rounded-lg hover:shadow-xl transition duration-300"
-      >
-        <div class="flex flex-row justify-between p-10">
-          <h4 class="text-teal-500 font-bold">What they say</h4>
-          <div class="shape flex flex-row justify-between items-start gap-2">
-            <div class="w-2 h-2 bg-gray-700 cursor-pointer rounded-full"></div>
-            <div
-              class="w-2 h-2 bg-gray-600/25 cursor-pointer rounded-full hover:bg-gray-700/50"
-            ></div>
-            <div
-              class="w-2 h-2 bg-gray-600/25 cursor-pointer rounded-full hover:bg-gray-700/50"
-            ></div>
-            <div
-              class="w-2 h-2 bg-gray-600/25 cursor-pointer rounded-full hover:bg-gray-700/50"
-            ></div>
-            <div
-              class="w-2 h-2 bg-gray-600/25 cursor-pointer rounded-full hover:bg-gray-700/50"
-            ></div>
-          </div>
+    <section class="container mx-auto px-4 sm:px-8 lg:px-16 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="flex flex-col justify-center items-start space-y-4">
+          <img src="images/coma.png" alt="shape-coma" class="w-16 h-16" />
+          <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">
+            what they say about <br />
+            WOC
+          </h2>
+          <p class="text-gray-600 text-sm sm:text-base">
+            More than 3000 users have been helped by <br />
+            World Online Course.
+          </p>
         </div>
-        <!-- quote -->
-        <div class="p-10">
-          <blockquote class="text-2xl">
-            “Studying at WOC is fun, the curriculum is <br />
-            complete, the instructors are competent, and <br />
-            the assignments given are also relevant to <br />
-            the current scope of work.”
-          </blockquote>
-        </div>
-        <!-- person -->
-        <div class="flex flex-row gap-4 p-5">
-          <img src="images/person.png" alt="opinion-Person" />
-          <div class="flex-row">
-            <h3 class="font-bold">Resky Fernanda</h3>
-            <p>Product Designer at Tokopedia</p>
-          </div>
 
-          <div class="flex flex-row gap-4 ml-50">
+        <div
+          class="bg-gray-100 drop-shadow-lg rounded-lg hover:shadow-xl transition duration-300 p-6"
+        >
+          <div class="flex justify-between items-center mb-6">
+            <h4 class="text-teal-500 font-bold text-lg">What they say</h4>
+            <!-- Dots -->
+            <div class="flex space-x-2">
+              <div
+                class="w-2 h-2 bg-teal-500 cursor-pointer rounded-full"
+              ></div>
+              <div
+                class="w-2 h-2 bg-gray-300 cursor-pointer rounded-full hover:bg-teal-500/50 transition duration-300"
+              ></div>
+              <div
+                class="w-2 h-2 bg-gray-300 cursor-pointer rounded-full hover:bg-teal-500/50 transition duration-300"
+              ></div>
+              <div
+                class="w-2 h-2 bg-gray-300 cursor-pointer rounded-full hover:bg-teal-500/50 transition duration-300"
+              ></div>
+              <div
+                class="w-2 h-2 bg-gray-300 cursor-pointer rounded-full hover:bg-teal-500/50 transition duration-300"
+              ></div>
+            </div>
+          </div>
+          <!-- Quote -->
+          <div class="p-10">
+            <blockquote
+              class="text-xl sm:text-2x1 text-gray-700 leading-relaxed mb-6"
+            >
+              “Studying at WOC is fun, the curriculum is complete, the
+              instructors are competent, and the assignments given are also
+              relevant to the current scope of work.”
+            </blockquote>
+          </div>
+          <!-- person -->
+          <div class="flex items-center space-x-4">
+            <img
+              src="images/person.png"
+              alt="opinion-Person"
+              class="w-12 h-12 rounded-full object-cover"
+            />
+            <div>
+              <h3 class="font-bold text-gray-900 text-lg">Resky Fernanda</h3>
+              <p class="text-gray-600 text-sm">Product Designer at Tokopedia</p>
+            </div>
+          </div>
+          <!-- Nav -->
+          <div class="flex justify-end space-x-4 mt-6">
             <button class="cursor-pointer">
               <img
                 src="images/arrow-left.png"
-                alt=""
-                class="rounded-full hover:bg-teal-500/50 transition duration-300"
+                alt="pervious"
+                class="w-8 h-8 rounded-full hover:bg-teal-500/50 transition duration-300"
               />
             </button>
             <button class="cursor-pointer">
               <img
                 src="images/arrow-right.png"
-                alt=""
-                class="rounded-full hover:bg-teal-500/50 transition duration-300"
+                alt="Next"
+                class="w-8 h-8 rounded-full hover:bg-teal-500/50 transition duration-300"
               />
             </button>
           </div>
@@ -584,15 +657,17 @@
 
     <!-- footer section -->
 
-    <footer class="bg-gray-900 text-white py-25">
+    <footer class="bg-gray-900 text-white py-12">
       <div
-        class="container mx-auto px-6 lg:px-12 flex flex-col lg:flex-row justify-between items-center"
+        class="container mx-auto px-4 sm:px-8 lg:px-16 flex flex-col lg:flex-row justify-between items-center space-y-8 lg:space-y-0"
       >
-        <!-- Logo -->
-        <div class="mb-25 lg:mb-12">
-          <img src="images/Logo.png" alt="Logo" class="w-48 mb-8" />
+        <!-- Logo and links -->
+        <div class="flex flex-col items-center lg:items-start space-y-4">
+          <img src="images/Logo.png" alt="Logo" class="w-36 sm:w-48 mb-8" />
           <!-- Links -->
-          <nav class="flex flex-wrap justify-center space-x-6 text-sm">
+          <nav
+            class="flex flex-wrap justify-center lg:justify-start space-x-4 text-sm"
+          >
             <a
               href="#"
               class="hover:text-gray-400 hover:underline transition duration-300"
@@ -622,17 +697,19 @@
         </div>
 
         <!-- Subscripe -->
-        <div class="mt-6 lg:mt-0 flex flex-col items-start space-x-3">
-          <p class="text-sm mb-2">Get the freshest news from us</p>
+        <div class="flex flex-col items-center lg:items-start space-y-4">
+          <p class="text-sm text-center lg:text-left">
+            Get the freshest news from us
+          </p>
           <div class="flex border border-gray-600 rounded-full overflow-hidden">
             <input
               type="email"
               placeholder="Your email address..."
-              class="px-4 py-2 bg-gray-800 text-white focus:outline-none"
+              class="px-4 py-2 bg-gray-800 text-white focus:outline-none w-48 sm:w-64"
             />
             <button
               type="submit"
-              class="bg-yellow-500 px-10 py-3 rounded-full hover:bg-yellow-600 transition duration-300"
+              class="bg-yellow-500 px-6 py-2 rounded-full hover:bg-yellow-600 transition duration-300"
             >
               Subscribe
             </button>
@@ -644,9 +721,11 @@
 
       <!-- Bottom  -->
       <div
-        class="container mx-auto px-6 lg:px-12 flex flex-col lg:flex-row justify-between items-center text-xs text-gray-400"
+        class="container mx-auto px-4 sm:px-8 lg:px-16 flex flex-col lg:flex-row justify-between items-center text-xs text-gray-400"
       >
-        <div class="flex space-x-3 mb-4 lg:mb-0">
+        <div
+          class="flex flex-wrap justify-center lg:justify-start space-x-3 mb-4 lg:mb-0"
+        >
           <a
             href="#"
             class="hover:text-white hover:underline transition duration-300"
@@ -672,7 +751,8 @@
           >
           <span>|</span>
         </div>
-        <p>
+        <!-- CopyRight -->
+        <p class="text-center lg:text-left">
           Copyright 2025 - Solidarity Solar Ltd By &copy;
           <a
             href="https://github.com/Muhammadbadawy64"
@@ -682,6 +762,7 @@
         </p>
       </div>
     </footer>
+    <!-- End Footer -->
 
     <script src="src/script.js"></script>
   </body>

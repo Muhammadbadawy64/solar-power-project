@@ -3,18 +3,30 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx tailwindcss -i ./src/styles.css -o ./dist/output.css",
+    "watch": "npx tailwindcss -i ./src/styles.css -o ./dist/output.css --watch"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "Solar Power Project By Tailwind CSS",
   "dependencies": {
     "@tailwindcss/cli": "^4.0.14",
-    "@tailwindcss/vite": "^4.0.14",
-    "tailwindcss": "^4.0.14"
+    "@tailwindcss/vite": "^4.0.14"
   },
   "devDependencies": {
-    "prettier-plugin-tailwindcss": "^0.6.11"
-  }
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.3",
+    "prettier-plugin-tailwindcss": "^0.6.11",
+    "tailwindcss": "^3.4.17"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Muhammadbadawy64/solar-power-project.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Muhammadbadawy64/solar-power-project/issues"
+  },
+  "homepage": "https://github.com/Muhammadbadawy64/solar-power-project#readme"
 }

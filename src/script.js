@@ -1,11 +1,21 @@
-// document.getElementById('menu-toggle').addEventListener("click" , e => {
-//     const menu = document.getElementById('menu');
-//     menu.classList.toggle('hidden')
-// })
+document.getElementById("menuBtn").addEventListener("click", function () {
+  const mobileMenu = document.getElementById("mobileMenu");
+  mobileMenu.classList.toggle("hidden");
+});
 
-const menuBtn = document.getElementById('menuBtn');
-const mobileMenu = document.getElementById('mobileMenu');
+document.getElementById("closeBtn").addEventListener("click", () => {
+  const mobileMenu = document.getElementById("mobileMenu");
+  mobileMenu.classList.toggle("hidden");
+});
 
-menuBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
+const headerRef = document.getElementById("nav");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 100) {
+    headerRef.classList.add("bg-teal-800");
+    headerRef.style.padding = "2px";
+  } else {
+    headerRef.classList.remove("bg-teal-800");
+    headerRef.style.padding = "0px";
+  }
 });
