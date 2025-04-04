@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./index.html", "./src/**/*.css"], // تحديد الملفات التي يستخدمها Tailwind لفحص الـ HTML و CSS
+  content: ["./**/*.{html,js}"],
   theme: {
     extend: {
       colors: {
