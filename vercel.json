@@ -5,5 +5,11 @@
       "src": "dist/output.css",
       "use": "@vercel/static"
     }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/"
+    }
   ]
 }
