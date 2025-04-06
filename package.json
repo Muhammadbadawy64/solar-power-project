@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "npx postcss src/styles.css -o dist/output.css --verbose"
+    "build": "npx postcss src/styles.css -o dist/output.css && cp index.html dist/"
   },
   "keywords": [],
   "author": "",
